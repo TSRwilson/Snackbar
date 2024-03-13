@@ -155,15 +155,15 @@ public enum Snackbar {
         )
 
       func calculateMaximumToastWidth(mainWindow: NSWindow?) -> CGFloat {
-    guard let mainWindow = mainWindow else { return CGFloat.zero }
+        guard let mainWindow = mainWindow else { return CGFloat.zero }
 
-    let windowWidth = mainWindow.frame.size.width
-    let maximumToastWidth = windowWidth - (2 * padding) // Adjust this margin as needed
+        let windowWidth = mainWindow.frame.size.width
+        let maximumToastWidth = windowWidth - (2 * padding) // Adjust this margin as needed
 
-    return maximumToastWidth
-}
+        return maximumToastWidth
+            }
 
-    let toastWidth = calculateMaximumToastWidth(mainWindow: mainWindow)
+        let toastWidth = calculateMaximumToastWidth(mainWindow: mainWindow)
 
 
         let toastSize = CGSize(

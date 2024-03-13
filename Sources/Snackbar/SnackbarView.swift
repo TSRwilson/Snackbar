@@ -117,6 +117,7 @@ final class SnackbarView: NSBox {
         titleLabel.font = titleText.font ?? Constants.titleFont
         titleLabel.isSelectable = false
         titleLabel.textColor = textColor
+        titleLabel.alignment = .center  // Align title text at center horizontally
         textStackView.addArrangedSubview(titleLabel)
         
         if let subtitleText {
@@ -124,6 +125,7 @@ final class SnackbarView: NSBox {
             subtitleLabel.font = subtitleText.font ?? Constants.subtitleFont
             subtitleLabel.isSelectable = false
             subtitleLabel.textColor = .secondaryLabelColor // TODO: Color
+            titleLabel.alignment = .center  // Align title text at center horizontally
             textStackView.addArrangedSubview(subtitleLabel)
         }
         
