@@ -154,8 +154,20 @@ public enum Snackbar {
             icon: icon
         )
 
+        private static func calculateMaximumToastWidth(mainWindow: NSWindow?) -> CGFloat {
+    guard let mainWindow = mainWindow else { return CGFloat.zero }
+
+    let windowWidth = mainWindow.frame.size.width
+    let maximumToastWidth = windowWidth - (2 * Constants.sideMargin) // Adjust this margin as needed
+
+    return maximumToastWidth
+}
+
+    let toastWidth = calculateMaximumToastWidth(mainWindow: mainWindow)
+
+
         let toastSize = CGSize(
-            width: round(snackbarView.fittingSize.width),
+            width: toastWidth,
             height: round(snackbarView.fittingSize.height)
         )
         
