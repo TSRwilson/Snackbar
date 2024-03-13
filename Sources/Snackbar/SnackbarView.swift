@@ -89,6 +89,7 @@ final class SnackbarView: NSBox {
         stackView.orientation = .horizontal
         stackView.alignment = .centerY
         
+        
         let addSeparator = {
             let separator = NSBox()
             separator.boxType = .separator
@@ -110,7 +111,7 @@ final class SnackbarView: NSBox {
         
         let textStackView = NSStackView()
         textStackView.spacing = Constants.spaceBetweenTitleAndSubtitle
-        textStackView.alignment = .leading
+        textStackView.alignment = .centerX
         textStackView.orientation = .vertical
         
         let titleLabel = NSTextField(labelWithString: titleText.text)
